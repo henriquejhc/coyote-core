@@ -13,6 +13,8 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.test.skip>true</maven.test.skip>
 		<java.version>1.7</java.version>
+		
+		<nexus.repository>http://buononumo.ddns.net:8180/nexus</nexus.repository>
 
 		<junit.version>4.11</junit.version>
 
@@ -58,8 +60,20 @@
 			</testResource>
 		</testResources>
 	</build>
+	
+	<distributionManagement>
+		<repository>
+			<id>deploymentNexus</id>
+			<name>Coyote Releases</name>
+			<url>${nexus.repository}/content/repositories/coyote/</url>
+		</repository>
+	</distributionManagement>
 
 	<repositories>
+		<repository>
+			<id>coyote-repo</id>
+			<url>${nexus.repository}/content/repositories/coyote/</url>
+		</repository>
 		<repository>
 			<id>prime-repo</id>
 			<name>PrimeFaces Maven Repository</name>
