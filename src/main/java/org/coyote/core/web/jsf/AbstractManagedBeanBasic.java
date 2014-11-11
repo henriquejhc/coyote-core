@@ -32,7 +32,9 @@ public abstract class AbstractManagedBeanBasic<T extends EntityBean> extends Abs
 
 	@Override
 	public void initComponents() {
-
+		initializeEntity();
+		initializeEntitySearch();
+		initializeDataModel();
 	}
 
 	public void initializeDataModel() {
@@ -107,6 +109,16 @@ public abstract class AbstractManagedBeanBasic<T extends EntityBean> extends Abs
 
 	public void entitySelected() {
 		System.out.println("---------> EntitySelected: [id = " + getEntity().getId() + "]");
+	}
+	
+	public void search(ActionEvent actionEvent) {		
+		initializeDataModel();		
+		getEntityList().load(0, getEntityList().getPageSize(), null, null,null);
+	}
+	
+	public void clearFilter(ActionEvent actionEvent) {		
+		initializeEntitySearch();
+		initializeDataModel();		
 	}
 
 	@Override

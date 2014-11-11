@@ -14,7 +14,7 @@
 		<maven.test.skip>true</maven.test.skip>
 		<java.version>1.7</java.version>
 		
-		<nexus.repository>http://buononumo.ddns.net:8180/nexus</nexus.repository>
+		<nexus.repository>http://serversgnr.ddns.net:8180/nexus</nexus.repository>
 
 		<junit.version>4.11</junit.version>
 
