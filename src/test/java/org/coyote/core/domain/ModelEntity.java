@@ -20,7 +20,6 @@ public class ModelEntity extends EntityBean implements Serializable {
  
 	private static final long serialVersionUID = 1L;
 	
-	private Long id;
 	private String name;
 	private Integer year;
 	private MarkEntity mark;
@@ -29,11 +28,7 @@ public class ModelEntity extends EntityBean implements Serializable {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id")
 	public Long getId() {
-		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
+		return super.id;
 	}
 
 	@Column(name = "name")

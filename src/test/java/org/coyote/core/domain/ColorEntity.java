@@ -17,18 +17,13 @@ public class ColorEntity extends EntityBean implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 
-	private Long id;
 	private String name;
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id")
 	public Long getId() {
-		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
+		return super.id;
 	}
 
 	@Column(name = "name")

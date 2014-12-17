@@ -18,7 +18,7 @@ public class PersonEntity extends EntityBean implements Serializable {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id")
 	public Long getId() {
-		return id;
+		return super.id;
 	}
 	
 	public PersonEntity() {

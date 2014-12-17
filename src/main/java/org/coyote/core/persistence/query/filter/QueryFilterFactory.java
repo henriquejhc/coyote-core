@@ -129,7 +129,7 @@ public class QueryFilterFactory {
 			String nameFilter = (nameParent != null && nameParent.isEmpty()) ? "" : nameParent + ".";
 
 			if (columnBean.getType().equals(String.class.getSimpleName())) {
-				filter = new Filter(nameFilter + joinColumnBeansParam.getName(), columnBean.getValue(), OperatorType.LIKE);
+				filter = new Filter(nameFilter + joinColumnBeansParam.getName() + "." + columnBean.getName(), columnBean.getValue(), OperatorType.LIKE);
 			} else if (columnBean.getType().equals(Long.class.getSimpleName()) && 
 					  (columnBean.getValue() != null && Long.parseLong(columnBean.getValue().toString()) > 0)) {
 				filter = new Filter(nameFilter + joinColumnBeansParam.getName() + "." + columnBean.getName(), columnBean.getValue(), OperatorType.EQUALS);

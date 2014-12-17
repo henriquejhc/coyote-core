@@ -20,7 +20,6 @@ public class CarEntity extends EntityBean implements Serializable {
 	
 	private static final long serialVersionUID = 1L;
 	
-	private Long id;
 	private Double price;
 	private ColorEntity color;
 	private ModelEntity model;
@@ -29,11 +28,7 @@ public class CarEntity extends EntityBean implements Serializable {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id")
 	public Long getId() {
-		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
+		return super.id;
 	}
 	
 	@Column(name = "price")
