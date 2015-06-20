@@ -33,9 +33,9 @@ public class QueryFilterFactory {
 		return null;
 	}
 
-	private static QueryFilter makeFilter(Object entity) throws IllegalAccessException, IllegalArgumentException,
-																InvocationTargetException, NoSuchMethodException, 
-																SecurityException, QueryFilterException {
+	private static QueryFilter makeFilter(Object entity) 
+			throws IllegalAccessException, IllegalArgumentException, InvocationTargetException, 
+				NoSuchMethodException,	SecurityException, QueryFilterException {
 
 		if (QueryFilterValidator.entityIsNull(entity)) {
 			throw new QueryFilterException("Object is null.");

@@ -19,6 +19,8 @@ public interface Persistence<T> {
 
 	public void save(T entity);
 	
+	public T merge(T entity);
+	
 	public void remove(T entity);
 	
 	public T getEntity(Long id);

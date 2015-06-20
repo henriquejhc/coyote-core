@@ -5,7 +5,7 @@ package org.coyote.core.util;
  * @author Jose Henrique Cardoso
  *
  */
-public class Formatter {
+public final class Formatter {
 	
 	public static final int CEP = 1;
 	public static final int CPF = 2;
@@ -25,7 +25,6 @@ public class Formatter {
 	private static final String SEMICOLON = ";";
 	private static final String UNDERLINE = "_";
 	private static final String HASH = "#";
-	
 	
 	public static String addMaskCep(String cep){
 		return cep.substring(0, 2) + DOT + cep.substring(2, 5) + HYPHEN + cep.substring(5, 8);

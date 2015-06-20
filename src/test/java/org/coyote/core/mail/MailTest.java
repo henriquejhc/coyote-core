@@ -6,7 +6,7 @@ public class MailTest {
 
 		SimpleMail mailPojo = new SimpleMail();
 		mailPojo.setSubject("Assunto lalala");
-		mailPojo.setSender("web3@modula.com.br");
+		mailPojo.setSender("henriquejhc@gmail.com");
 		mailPojo.setRecipient("henriquejhc@gmail.com");
 		mailPojo.setMessage("Mensagem lalalalala");
 

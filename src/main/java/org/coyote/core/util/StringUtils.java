@@ -1,7 +1,7 @@
 package org.coyote.core.util;
 
 
-public class StringUtils {
+public final class StringUtils {
 
 	public static String[] characters = { 
 		"0", "1", "2", "3", "4", "5", "6", "7", "8", "9", 
@@ -21,11 +21,15 @@ public class StringUtils {
 	private static final String LETTERS_WITH_ACCENT_ARRAY = "çÇáéíóúýÁÉÍÓÚÝàèìòùÀÈÌÒÙãõñäëïöüÿÄËÏÖÜÃÕÑâêîôûÂÊÎÔÛ";
 	private static final String UNACCENTED_LETTERS_ARRAY = "cCaeiouyAEIOUYaeiouAEIOUaonaeiouyAEIOUAONaeiouAEIOU";
 	private static char[] TABLE;
+	
 	static {
+		
 		TABLE = new char[256];
+		
 		for (int i = 0; i < TABLE.length; ++i) {
 			TABLE[i] = (char) i;
 		}
+		
 		for (int i = 0; i < LETTERS_WITH_ACCENT_ARRAY.length(); ++i) {
 			TABLE[LETTERS_WITH_ACCENT_ARRAY.charAt(i)] = UNACCENTED_LETTERS_ARRAY.charAt(i);
 		}
@@ -42,6 +46,14 @@ public class StringUtils {
 			}
 		}
 		return sb.toString();
+	}
+	
+	public static boolean isNotNullOrBlank(String value) {
+		return value != null && value != "";
+	}
+	
+	public static boolean isNullOrBlank(String value) {
+		return !isNotNullOrBlank(value); 
 	}
 
 }

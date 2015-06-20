@@ -5,54 +5,6 @@ import org.coyote.core.persistence.query.filter.OperatorType;
 import org.coyote.core.persistence.query.filter.QueryFilter;
 
 public class QueryBuilder {
-
-//	public static void create(QueryFilter queryFilter, StringBuilder hql) {
-//
-//		if (queryFilter.getFilters() != null && !queryFilter.getFilters().isEmpty()) {
-//
-//			hql.append(QueryFilter.WHERE);
-//
-//			int sizeListFilters = queryFilter.getFilters().size();
-//
-//			for (int indexFilter = 0; indexFilter < sizeListFilters; indexFilter++) {
-//
-//				if (queryFilter.getFilters().get(indexFilter).getOperatorType().equals(OperatorType.OPEN)) {
-//					hql.append(" ( ");
-//				} else if (queryFilter.getFilters().get(indexFilter).getOperatorType().equals(OperatorType.CLOSE)) {
-//					hql.append(" ) ");
-//				} else if (queryFilter.getFilters().get(indexFilter).getName().equals(OperatorType.OR)) {
-//					hql.append(QueryFilter.OR);
-//				} else if (queryFilter.getFilters().get(indexFilter).getOperatorType().equals(OperatorType.IS_NOT_NULL)
-//						|| queryFilter.getFilters().get(indexFilter).getOperatorType().equals(OperatorType.IS_NULL)) {
-//					hql.append(queryFilter.getFilters().get(indexFilter));
-//				} else if (queryFilter.getFilters().get(indexFilter).getOperatorType().equals(OperatorType.DIFFERENT)
-//						|| queryFilter.getFilters().get(indexFilter).getOperatorType().equals(OperatorType.GREATER)
-//						|| queryFilter.getFilters().get(indexFilter).getOperatorType().equals(OperatorType.LESS)
-//						|| queryFilter.getFilters().get(indexFilter).getOperatorType().equals(OperatorType.GREATER_OR_EQUAL)
-//						|| queryFilter.getFilters().get(indexFilter).getOperatorType().equals(OperatorType.LESS_OR_EQUAL)) {
-//					hql.append(queryFilter.getFilters().get(indexFilter).getName() + " :parameter" + indexFilter);
-//				} else if (queryFilter.getFilters().get(indexFilter).getOperatorType().equals(OperatorType.LIKE)) {
-//					hql.append("upper(" + queryFilter.getFilters().get(indexFilter).getName() + ") like" + " upper(:parameter"
-//							+ indexFilter + ")");
-//				} else {
-//					hql.append(queryFilter.getFilters().get(indexFilter).getName() + " = :parameter" + indexFilter);
-//				}
-//
-//				if (indexFilter < (sizeListFilters - 1)) {
-//					if (!queryFilter.getFilters().get(indexFilter).getOperatorType().equals(OperatorType.OPEN)
-//							&& !queryFilter.getFilters().get(indexFilter + 1).getOperatorType().equals(OperatorType.CLOSE)
-//							&& !queryFilter.getFilters().get(indexFilter).getOperatorType().equals(OperatorType.OR)
-//							&& !queryFilter.getFilters().get(indexFilter + 1).getOperatorType().equals(OperatorType.OR)) {
-//						hql.append(" and ");
-//					}
-//				}
-//			}
-//		}
-//
-//		if (queryFilter != null && (queryFilter.getOrderBy() != null && !queryFilter.getOrderBy().trim().equals(""))) {
-//			hql.append(" " + QueryFilter.ORDER_BY.replaceAll("orderBy", queryFilter.getOrderBy()));
-//		}
-//	}
 	
 	public static void create(QueryFilter queryFilter, StringBuilder hql) {
 

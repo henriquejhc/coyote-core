@@ -20,18 +20,18 @@
 
 		<javax.faces.version>2.2.7</javax.faces.version>
 		<javax.servlet.api.version>3.0.1</javax.servlet.api.version>
-		<primefaces.version>5.0</primefaces.version>
+		<primefaces.version>5.2</primefaces.version>
 
-		<hibernate.core.version>4.3.6.Final</hibernate.core.version>
-		<hibernate.entitymanager.version>4.3.6.Final</hibernate.entitymanager.version>
+		<hibernate.core.version>4.3.10.Final</hibernate.core.version>
+		<hibernate.entitymanager.version>4.3.10.Final</hibernate.entitymanager.version>
 
 		<org.json.version>20140107</org.json.version>
-		<commons.beanutils.version>20030211.134440</commons.beanutils.version>
+		<commons.beanutils.version>1.9.2</commons.beanutils.version>
 
-		<mail.version> 1.4</mail.version>
+		<javax.mail.api.version>1.5.3</javax.mail.api.version>
 
-		<log4j.core.version>2.0.2</log4j.core.version>
-		<log4j.api.version>2.0.2</log4j.api.version>
+		<log4j.core.version>2.3</log4j.core.version>
+		<log4j.api.version>2.3</log4j.api.version>
 	</properties>
 
 	<build>
@@ -119,8 +119,8 @@
 
 		<dependency>
 			<groupId>javax.mail</groupId>
-			<artifactId>mail</artifactId>
-			<version>${mail.version}</version>
+			<artifactId>javax.mail-api</artifactId>
+			<version>${javax.mail.api.version}</version>
 		</dependency>
 
 		<!-- Mojarra (implementacao do JSF) -->

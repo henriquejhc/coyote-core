@@ -36,6 +36,12 @@ public abstract class AbstractService<T extends EntityBean> implements Serializa
 	public void save(T entity) {
 		getPersistence().save(entity);
 	}
+	
+	@SuppressWarnings("unchecked")
+	@Override
+	public T merge(T entity) {
+		return (T) getPersistence().merge(entity);
+	}
 
 	@SuppressWarnings("unchecked")
 	@Override
